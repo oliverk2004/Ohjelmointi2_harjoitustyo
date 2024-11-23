@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxAsukkaat.MuokkaaTietojaController">
+   <bottom>
+      <BorderPane BorderPane.alignment="CENTER">
+         <right>
+            <Button mnemonicParsing="false" onAction="#handleLopeta" text="Sulje" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </Button>
+         </right>
+         <left>
+            <Button mnemonicParsing="false" onAction="#handleTallenna" text="Tallenna" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin></Button>
+         </left>
+         <center>
+            <Label fx:id="labelVirhe" stylesheets="@asukkaat.css" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </bottom>
+   <center>
+      <BorderPane prefHeight="355.0" prefWidth="273.0" BorderPane.alignment="CENTER">
+         <top>
+            <Label text="Henkilötiedot" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <GridPane fx:id="gridAsukas" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="editTaikasauva" maxHeight="25.0" maxWidth="150.0" prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="Sukupuoli" GridPane.rowIndex="2" />
+                  <Label text="Hiusten väri" GridPane.rowIndex="3" />
+                  <Label text="Syntyperä" GridPane.rowIndex="4" />
+                  <Label text="Mörkö" GridPane.rowIndex="5" />
+                  <TextField fx:id="editMorko" maxHeight="25.0" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="editSyntypera" maxHeight="25.0" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="editHvari" maxHeight="25.0" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="Nimi" />
+                  <Label text="Tupa" GridPane.rowIndex="1" />
+                  <Label text="Taikasauva" GridPane.rowIndex="6" />
+                  <TextField fx:id="editSukupuoli" maxHeight="25.0" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="editTupa" maxHeight="25.0" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="editNimi" maxHeight="25.0" maxWidth="150.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

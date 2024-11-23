@@ -1,0 +1,14 @@
+package fxAsukkaat;
+
+import fi.jyu.mit.fxgui.Dialogs;
+
+/**
+ * @author olive
+ * @version 27.1.2024
+ */
+public class AsukkaatGUIController {
+
+	private void tallenna() {
+		Dialogs.showMessageDialog("Tallennetaan! Mutta ei toimi vielä");
+	}
+}

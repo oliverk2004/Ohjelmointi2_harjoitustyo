@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxAsukkaat.AsukkaatGUIController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="true" text="Tiedosto">
+                    <items>
+                        <MenuItem mnemonicParsing="true" onAction="#handleTallenna" text="Tallenna" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleTulosta" text="Tulosta" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleLopeta" text="Lopeta" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Muokkaa">
+                    <items>
+                        <MenuItem onAction="#LuoAsukas" text="Lisää uusi asukas" />
+                        <MenuItem onAction="#PoistaAsukas" text="Poista asukas" />
+                        <MenuItem onAction="#MuokkaaTietoja" text="Muokkaa tietoja" />
+                  <MenuItem mnemonicParsing="false" text="Lisää elokuviin tietoja" />
+                  <MenuItem mnemonicParsing="false" onAction="#PoistaElokuvienTiedot" text="Poista elokuvien tietoja" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Apua">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleOhje" text="Helppiä" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <BorderPane BorderPane.alignment="CENTER">
+            <top>
+                <BorderPane maxHeight="50.0" prefHeight="50.0" BorderPane.alignment="CENTER">
+                    <top>
+                        <Label text="Asukkaan haku" BorderPane.alignment="CENTER" />
+                    </top>
+               <left>
+                          <ComboBoxChooser fx:id="cbKentat" onAction="#handleHakuehto" rivit="Hakuehto:" BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <TextField fx:id="hakuehto" onKeyReleased="#handleHakuehto" BorderPane.alignment="CENTER" />
+               </center>
+                </BorderPane>
+            </top>
+            <center>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <center>
+                        <BorderPane minHeight="350.0" minWidth="200.0" prefHeight="350.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+                            <center>
+                                <BorderPane fx:id="panelAsukas" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <center>
+                                        <GridPane fx:id="gridAsukas" BorderPane.alignment="CENTER">
+                                            <columnConstraints>
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label text="Nimi" />
+                                                <Label text="Tupa" GridPane.rowIndex="1" />
+                                                <Label text="Sukupuoli" GridPane.rowIndex="2" />
+                                                <Label text="Hiusten väri" GridPane.rowIndex="3" />
+                                                <Label text="Syntyperä" GridPane.rowIndex="4" />
+                                                <Label text="Mörkö" GridPane.rowIndex="5" />
+                                                <TextField fx:id="editNimi" editable="false" GridPane.columnIndex="1" />
+                                                <TextField fx:id="editTupa" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="editSukupuoli" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="editHvari" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField fx:id="editSyntypera" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextField fx:id="editMorko" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <TextField fx:id="editTaikasauva" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <Label text="Taikasauva" GridPane.rowIndex="6" />
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </padding>
+                                            <BorderPane.margin>
+                                                <Insets />
+                                            </BorderPane.margin>
+                                        </GridPane>
+                                    </center>
+                                    <top>
+                                        <ListChooser fx:id="chooserAsukkaat" prefHeight="201.0" prefWidth="200.0" rivit="" />
+                                    </top>
+                                </BorderPane>
+                            </center>
+                            <BorderPane.margin>
+                                <Insets right="10.0" />
+                            </BorderPane.margin>
+                        </BorderPane>
+                    </center>
+                    <left>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <top>
+                                <Label text="Tupa:" BorderPane.alignment="CENTER" />
+                            </top>
+                            <center>
+                                <RadioButtonChooser fx:id="tuvanValinta" prefHeight="258.0" prefWidth="200.0" rivit="Kaikki asukkaat&#10;Luihuinen&#10;Rohkelikko&#10;Puuskupuh&#10;Korpinkynsi" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleValitseTupa" text="Hae tuvan perusteella" />
+                              <Label fx:id="labelValittu" />
+                           </children></RadioButtonChooser>
+                            </center>
+                     <bottom>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
+                     </bottom>
+                        </BorderPane>
+                    </left>
+                </BorderPane>
+            </center>
+            <right>
+                <BorderPane prefHeight="418.0" prefWidth="264.0" BorderPane.alignment="CENTER">
+                    <center>
+                        <StringGrid fx:id="tableElokuvanTiedot" editable="true" rivit="näyttelijä|kysymys|esiintymiset&#10;" BorderPane.alignment="CENTER" />
+                    </center>
+                </BorderPane>
+            </right>
+        </BorderPane>
+    </center>
+    <bottom>
+        <HBox prefHeight="44.0" prefWidth="664.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#LuoAsukas" prefHeight="26.0" prefWidth="133.0" text="Lisää uusi asukas">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#AvaaLisaaTietoja" prefHeight="26.0" prefWidth="146.0" text="Lisää elokuviin tietoja">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#MuokkaaTietoja" prefHeight="26.0" prefWidth="110.0" text="Muokkaa tietoja">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#handleTallenna" text="Tallenna">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="70.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="handleLopeta" mnemonicParsing="false" onAction="#handleLopeta" text="Sulje">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

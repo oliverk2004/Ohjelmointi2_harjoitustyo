@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="ohj2">
+    <archive path="C:/devel/jar/Ali.jar" />
+    <archive path="C:/devel/jar/fxgui.jar" />
+    <archive path="C:/devel/jar/Graphics.jar" />
+    <archive path="C:/devel/jar/Music.jar" />
+  </library>
+</eclipse-userlibraries>
+

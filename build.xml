@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project src">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}"/>
+    <property name="dir.jarfile" value="${dir.workspace}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.workspace}/Asukkaat.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="fxAsukkaat.AsukkaatMain"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.workspace}/src"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-jupiter-api_5.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-jupiter-engine_5.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-jupiter-migrationsupport_5.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-jupiter-params_5.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-platform-commons_1.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-platform-engine_1.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-platform-launcher_1.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-platform-runner_1.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-platform-suite-api_1.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-platform-suite-engine_1.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-platform-suite-commons_1.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/junit-vintage-engine_5.10.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/org.opentest4j_1.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/org.apiguardian.api_1.1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/org.junit_4.13.2.v20230809-1000.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/org.hamcrest_2.2.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/ec2312/eclipse/plugins/org.hamcrest.core_2.2.0.v20230809-1000.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/jar/Ali.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/jar/fxgui.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/jar/Graphics.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/devel/jar/Music.jar"/>
+        </jar>
+    </target>
+</project>

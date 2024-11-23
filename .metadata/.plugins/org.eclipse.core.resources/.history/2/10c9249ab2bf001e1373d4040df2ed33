@@ -1,0 +1,43 @@
+package fxAsukkaat;
+
+import fi.jyu.mit.fxgui.Dialogs;
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import fi.jyu.mit.fxgui.ComboBoxChooser;
+import fi.jyu.mit.fxgui.ModalController;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
+/**
+ * @author olive
+ * @version 27.1.2024
+ */
+public class AsukkaatGUIController implements Initializable{
+	
+    @FXML void handleTallenna(ActionEvent event) {
+        tallenna();
+    }
+    
+    @FXML
+    void handleTulosta(ActionEvent event) {
+    	TulostusController.handleTulosta;
+    }
+    
+    @Override
+    public void initialize(URL url, ResourceBundle bundle) {
+        //      
+    }
+
+	private void tallenna() {
+		Dialogs.showMessageDialog("Tallennetaan! Mutta ei toimi vielä");
+	}
+	
+}

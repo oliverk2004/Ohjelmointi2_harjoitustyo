@@ -1,0 +1,26 @@
+package fxAsukkaat;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+
+public class TulostaController {
+
+    @FXML
+    private TextArea tulostusAlue;
+
+    @FXML
+    void handleTulosta(ActionEvent event) {
+
+    }
+
+    /**
+     * Näyttää tulostusalueessa tekstin
+     * @param tulostus tulostettava teskti
+     */
+    public static void tulosta(String tulostus) {
+        ModalController.showModeless(TulostusController.class.getResource("TulostusView.fxml"),
+                "Tulostus", tulostus);
+    }
+
+}
